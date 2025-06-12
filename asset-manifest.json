@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/alinvdu/alin-portfolio/static/css/main.2b06f3e6.css",
+    "main.js": "/alinvdu/alin-portfolio/static/js/main.58657339.js",
+    "static/js/453.1407b060.chunk.js": "/alinvdu/alin-portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/selfAICover.png": "/alinvdu/alin-portfolio/static/media/selfAICover.67ffb29cc10bd1aaf58d.png",
+    "static/media/neuralArtCover.png": "/alinvdu/alin-portfolio/static/media/neuralArtCover.8134e7cc26c6b8c5588c.png",
+    "static/media/zebraFishConnectomeCover.png": "/alinvdu/alin-portfolio/static/media/zebraFishConnectomeCover.ce15abd6fc94a5133139.png",
+    "index.html": "/alinvdu/alin-portfolio/index.html",
+    "main.2b06f3e6.css.map": "/alinvdu/alin-portfolio/static/css/main.2b06f3e6.css.map",
+    "main.58657339.js.map": "/alinvdu/alin-portfolio/static/js/main.58657339.js.map",
+    "453.1407b060.chunk.js.map": "/alinvdu/alin-portfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b06f3e6.css",
+    "static/js/main.58657339.js"
+  ]
+}
