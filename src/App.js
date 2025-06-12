@@ -5,6 +5,9 @@ import neuralArtCover from './neuralArtCover.png';
 import zebraFishConnectomeCover from './zebraFishConnectomeCover.png';
 import { MdOutlineEmail } from "react-icons/md";
 import { BsArrowDown } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
+import { BsArrowRight } from "react-icons/bs";
+
 
 import { useState, useEffect } from "react";
 
@@ -37,7 +40,8 @@ function App() {
         justifyContent: "space-between",
         alignItems: "center",
         width: "100%",
-        background: 'rgba(35, 35, 35, 1)',
+        height: 80,
+        borderBottom: '1px solid rgba(255, 255, 255, 0.15)',
         paddingLeft: width < 1400 ? 50 : 150,
         paddingRight: width < 1400 ? 50 : 150,
         boxSizing: "border-box",
@@ -47,33 +51,34 @@ function App() {
         }}>Alin</h1>
         <p style={{
           fontSize: 17
-        }}>AI Engineer Portfolio Show Case</p>
+        }}>{width < 500 ? "Portfolio" : "AI Engineer Portfolio Show Case"}</p>
       </div>
       <div style={{
-        marginTop: 120,
+        marginTop: width < 800 ? 80 : 120,
         display: "flex",
         width: "100%",
         paddingLeft: width < 1200 ? 50 : width < 1400 ? 100 : 250,
         paddingRight: width < 1200 ? 50 : width < 1400 ? 100 : 250,
         boxSizing: "border-box",
-        flexDirection: "row",
-        justifyContent: "center"
+        flexDirection: width < 800 ? "column" : "row",
+        justifyContent: "center",
+        alignItems: "center"
       }}>
         <img src="photo.png" alt="photo" style={{
-          width: 440,
-          alignSelf: "flex-start",
+          width: width < 600 ? 200 : width < 960 ? 320 : 440,
+          alignSelf: width < 800 ? "center" : "flex-start",
           borderRadius: "50%",
           border: "5px solid rgba(255, 255, 255, 0.15)",
           marginTop: -30
         }} />
         <div style={{
-          marginLeft: 50,
-          marginTop: 50
+          marginLeft: width < 800 ? 0 : 50,
+          marginTop: width < 800 ? 25 : width < 960 ? 0 : 50
         }}>
           <div style={{
-            fontSize: 37,
-            textAlign: "left",
-            maxWidth: 450,
+            fontSize: width < 600 ? 25 : 37,
+            textAlign: width < 800 ? "center" : "left",
+            maxWidth: width < 800 ? 520 : 450,
             fontWeight: 600
           }}>
             Hi, I am <span className="anta-regular">Alin</span>. Welcome to my AI Engineer Portfolio!
@@ -82,7 +87,7 @@ function App() {
             fontSize: 16,
             letterSpacing: 1,
             lineHeight: 1.5,
-            textAlign: "left",
+            textAlign: width < 800 ? "center" : "left",
             maxWidth: 520,
             marginTop: 35,
             fontWeight: 200
@@ -92,7 +97,9 @@ function App() {
             artificial intelligence, specializing in RAG systems, neural interfaces, and AI-driven automation with a focus on low-latency, production-grade deployments.
           </div>
           <div style={{
-            marginTop: 50
+            marginTop: 50,
+            display: "flex",
+            justifyContent: width < 800 ? "center" : "flex-start"
           }}>
             <div style={{
               width: 150,
@@ -168,7 +175,8 @@ function App() {
             watchMoreLink="https://www.youtube.com/watch?v=3CxksyyeeQg&t=57s"
             githubLink="https://github.com/alinvdu/SelfInterface"
             visitLink="https://selfai.live"
-
+            hasBorder
+            width={width}
           />
           <Element
             image={neuralArtCover}
@@ -178,6 +186,8 @@ function App() {
             interactionText="More Info"
             githubLink="https://github.com/alinvdu/neural-art"
             watchMoreLink="https://www.youtube.com/watch?v=8v_EB73m6cQ"
+            hasBorder
+            width={width}
           />
           <Element
             image={zebraFishConnectomeCover}
@@ -185,15 +195,37 @@ function App() {
             description="Inspired by the paper 'A cellular-Resolution Atlas of the Larval Zebrafish Brain' and my passion about uncovering how intelligent system work, I've tried to reproduce some of the findings in the paper related to how simple organism brain works. In this project I provide exact anatomical meshes for 3D reproduction and computation of the connectome, perform analysis on the connection between different parts of the brain and draw conclusions about high level brain regions & how they function."
             skills={['Neuromorphic Computing', 'MatPlotLib', 'Neuroscience', 'Neuroanatomy']}
             githubLink="https://github.com/alinvdu/neuromorphic-connectome-approach"
+            width={width}
           />
+        </div>
+      </div>
+      <div style={{
+        width: "100%",
+        marginTop: 15,
+        paddingBottom: 65,
+        marginBottom: 35,
+        borderBottom: '1px solid rgba(255, 255, 255, 0.15)'
+      }}>
+        <div
+          style={{
+            fontSize: width < 450 ? 15 : width < 600 ? 16 : 19,
+            display: "flex",
+            justifyContent: "center"
+          }}
+        >
+          <span>For more projects, check my</span> <BsArrowRight style={{marginLeft: 5, marginTop: 1}} /> <FaGithub onClick={() => {
+            window.open("https://github.com/alinvdu", "_blank")
+          }} style={{marginLeft: 10, marginTop: 1, cursor: "pointer"}} /> <span onClick={() => {
+            window.open("https://github.com/alinvdu", "_blank")
+          }} style={{ marginLeft: 4, textDecoration: "underline", cursor: "pointer" }}>GitHub Profile.</span>
         </div>
       </div>
       <div style={{
         display: "flex",
         justifyContent: "space-between",
         width: "100%",
-        paddingLeft: width < 1200 ? 50 : width < 1400 ? 150 : 250,
-        paddingRight: width < 1200 ? 50 : width < 1400 ? 150 : 250,
+        paddingLeft: width < 1400 ? 50 : 150,
+        paddingRight: width < 1400 ? 50 : 150,
         boxSizing: "border-box",
         paddingBottom: 50
       }}>

@@ -3,7 +3,7 @@ import { FiEye } from "react-icons/fi";
 import { IoLinkOutline } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 
-function Element({ image, styles, title, description, skills, interactionText, watchMoreLink, visitLink, githubLink }) {
+function Element({ image, styles, title, description, skills, interactionText, watchMoreLink, visitLink, githubLink, hasBorder, width }) {
   return (
     <div style={{
         width: "100%",
@@ -17,28 +17,28 @@ function Element({ image, styles, title, description, skills, interactionText, w
             display: "flex",
             flexDirection: "column",
             paddingBottom: 75,
-            marginBottom: 45,
-            borderBottom: '1px solid rgba(255, 255, 255, 0.15)',
+            marginBottom: hasBorder && 45,
+            borderBottom: hasBorder && '1px solid rgba(255, 255, 255, 0.15)',
         }}>
             <div style={{
                 fontSize: 25,
                 marginBottom: 35,
                 letterSpacing: 0.5,
-                textAlign: "left"
+                textAlign: width < 800 ? "center" : "left"
             }}>
                 {title}
             </div>
             <div style={{
                 display: "flex",
-                flexDirection: "row"
+                flexDirection: width < 800 ? "column" : "row"
             }}>
                 <div style={{
-                    minWidth: 500,
-                    maxWidth: 500,
+                    minWidth: width < 550 ? 300 : width < 960 && width > 800 ? 320 : 500,
+                    maxWidth: width < 550 ? 300 : width < 960 && width > 800 ? 320 : 500,
                     borderRadius: 15,
                     border: "7px solid rgba(255, 255, 255, 0.15)",
                     overflow: "hidden",
-                    alignSelf: "flex-start",
+                    alignSelf: width < 800 ? "center" : "flex-start",
                     display: "flex"
                 }}>
                 <img src={image} alt="Element" style={{
@@ -52,14 +52,15 @@ function Element({ image, styles, title, description, skills, interactionText, w
                     flexDirection: "column"
                 }}>
                     <div style={{
-                        marginLeft: 15,
+                        marginLeft: width < 800 ? 0 : 15,
                         display: "flex",
+                        marginTop: width < 800 ? 25 : 0,
                         flexDirection: "column",
-                        justifyContent: "flex-start",
-                        alignItems: "flex-start",
-                        textAlign: "left",
+                        justifyContent: width < 800 ? "center" : "flex-start",
+                        alignItems: width < 800 ? "center" : "flex-start",
+                        textAlign: width < 800 ? "center" : "left",
                         paddingLeft: 15,
-                        borderLeft: '1px dotted rgba(255, 255, 255, 0.45)',
+                        borderLeft: width < 800 ? "none" : '1px dotted rgba(255, 255, 255, 0.45)',
                     }}>
                         <div style={{
                         }}>
@@ -102,6 +103,7 @@ function Element({ image, styles, title, description, skills, interactionText, w
                     </div>
                     <div style={{
                         display: "flex",
+                        justifyContent: width < 800 ? "center" : "flex-start",
                         marginLeft: 30,
                         marginTop: 30,
                         flexWrap: "wrap"
