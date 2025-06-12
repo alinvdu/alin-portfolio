@@ -174,7 +174,7 @@ function App() {
             image={neuralArtCover}
             title="Neural Art - Brain to Image Art Creation"
             description="Neural Art enables user to generate art images similar to MidJourney directly from brain data using an EEG headset. Its current integration with Emotiv Epoch X permits the user to register brain data send it to the app, post-process it and then apply an in-house fine-tuned model architecture that will generate the art image. The solution is containerized and can be run locally with ease. The github repository features custom pipeline for noise reduction and data processing using Fourier Transformers and PCA."
-            skills={['Neural Signal Processing', 'MatLAB', 'Python', 'Diffusion', 'Fine-Tuning']}
+            skills={['Neural Signal Processing', 'MatLAB', 'Python', 'Diffusion', 'Fine-Tuning', 'Fourier Transforms', 'PCA']}
             interactionText="More Info"
             githubLink="https://github.com/alinvdu/neural-art"
             watchMoreLink="https://www.youtube.com/watch?v=8v_EB73m6cQ"
@@ -183,7 +183,7 @@ function App() {
             image={zebraFishConnectomeCover}
             title="Zebra Fish Connectome Analysis"
             description="Inspired by the paper 'A cellular-Resolution Atlas of the Larval Zebrafish Brain' and my passion about uncovering how intelligent system work, I've tried to reproduce some of the findings in the paper related to how simple organism brain works. In this project I provide exact anatomical meshes for 3D reproduction and computation of the connectome, perform analysis on the connection between different parts of the brain and draw conclusions about high level brain regions & how they function."
-            skills={['Neural Signal Processing', 'MatLAB', 'Python', 'Diffusion', 'Fine-Tuning']}
+            skills={['Neuromorphic Computing', 'MatPlotLib', 'Neuroscience', 'Neuroanatomy']}
             githubLink="https://github.com/alinvdu/neuromorphic-connectome-approach"
           />
         </div>
