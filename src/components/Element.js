@@ -65,7 +65,7 @@ function Element({ image, styles, title, description, skills, interactionText, w
                         <div style={{
                         }}>
                             <div style={{
-                                fontWeight: 200,
+                                fontWeight: 300,
                                 letterSpacing: 0.8
                             }}>{description}</div>
                         </div>

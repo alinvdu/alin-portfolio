@@ -2,6 +2,7 @@ import './App.css';
 import Element from './components/Element';
 import selfAICover from './selfAICover.png';
 import neuralArtCover from './neuralArtCover.png';
+import pdfToMem from './pdfToMem.png';
 import zebraFishConnectomeCover from './zebraFishConnectomeCover.png';
 import { MdOutlineEmail } from "react-icons/md";
 import { BsArrowDown } from "react-icons/bs";
@@ -166,10 +167,21 @@ function App() {
             boxSizing: "border-box"
           }}
         >
+           <Element
+            image={pdfToMem}
+            title={<span>PdfToMem - Dynamic Memory Configuration using LlamaIndex & MCP</span>}
+            description={<div>This project integrates some ideas I had regarding how to configure memory representations by using abstractions layers from LlamaIndex. It builds around multi-agent in which an Orchestrator decides between multiple agents that configure data structuring and representation using LangGraph. The memory representation is in form of LlamaIndex vector indices such as SentenceWindow, Semantic, Hierarchical, etc. <br /><br />This process is encapsulated by an MCP server which exposes tools for determining the representation, a storage FastAPI builds the query engine tools and then they can be consumed by the client. Learn more by watching the Demo!</div>}
+            skills={['MCP', 'LlamaIndex', 'LangGraph']}
+            interactionText="More Info"
+            watchMoreLink="https://youtu.be/KzMl4TJMBNM"
+            githubLink="https://github.com/alinvdu/PdfToMem"
+            hasBorder
+            width={width}
+          />
           <Element
             image={selfAICover}
-            title={<span>Self AI - Real-time Agent Communication Platform</span>}
-            description="Self AI delivers real-time, low-latency interaction with a 3D virtual avatar fine-tuned for psychology. Built with FastAPI and WebRTC, it instantly transcribes spoken input, analyzes emotional tone, and taps into contextual memory via a Vector Database. A custom GPT model then generates psychologically-aware responses, streamed live with voice, expressions, and gestures. The system ensures data privacy, supports message retention, and can generate immersive background visuals."
+            title={<span>Self AI - AI Platform for Mental Health Care</span>}
+            description={<div>Self AI delivers real-time, low-latency interaction with a 3D virtual avatar fine-tuned for psychology. It is one of the first platform that tries to deliver psychological insights, combine it with emotion and expressiveness to achieve the unachievable: Build real connection with human beings!<br/><br/> Built with FastAPI and WebRTC, it instantly transcribes spoken input, analyzes emotional tone, and taps into contextual memory via a Vector Database. A custom GPT model then generates psychologically-aware responses, streamed live with voice, expressions, and gestures. The system ensures data privacy, supports message retention, and can generate immersive background visuals. Try it out, it's live!</div>}
             skills={['FastAPI', 'WebRTC', 'RAG', 'Fine-Tuning']}
             interactionText="More Info"
             watchMoreLink="https://www.youtube.com/watch?v=3CxksyyeeQg&t=57s"
@@ -180,8 +192,8 @@ function App() {
           />
           <Element
             image={neuralArtCover}
-            title="Neural Art - Brain to Image Art Creation"
-            description="Neural Art enables user to generate art images similar to MidJourney directly from brain data using an EEG headset. Its current integration with Emotiv Epoch X permits the user to register brain data send it to the app, post-process it and then apply an in-house fine-tuned model architecture that will generate the art image. The solution is containerized and can be run locally with ease. The github repository features custom pipeline for noise reduction and data processing using Fourier Transformers and PCA."
+            title="Neural Art - Generating Art Images from Brain Signals"
+            description={<div>Neural Art enables user to generate art images similar to MidJourney directly from brain data using an EEG headset. Its current integration with Emotiv Epoch X permits the user to register brain data send it to the app, post-process it and then apply an in-house fine-tuned model architecture that will generate the art image. The solution is containerized and can be run locally with ease. <br/><br/>The github repository features custom pipeline for noise reduction and data processing using Fourier Transformers and PCA. Cutting edge neural research was adapted and trained on custom data pipeline to produce one of the first art image creation from brain signal. Watch real-time demo and explore the repository.</div>}
             skills={['Neural Signal Processing', 'MatLAB', 'Python', 'Diffusion', 'Fine-Tuning', 'Fourier Transforms', 'PCA']}
             interactionText="More Info"
             githubLink="https://github.com/alinvdu/neural-art"
